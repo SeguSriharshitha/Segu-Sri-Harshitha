@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body
+        {
+        background-image: url("https://www.india.com/wp-content/uploads/2021/10/Flights.png");
+        background-size: cover;
+        }
+        h3.big
+        {
+        line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 bg-light text-right">
+                <a href="/home" class="btn btn-info btn-lg">Home</a>
+                <a href="/predict" class="btn btn-primary disabled btn-lg">Predict</a>
+            </div>
+        </div>
+
+        <br>
+        <h1><strong>Flight Price Prediction</strong></h1><br>
+        <h4>
+        <form action="/pred" method="POST">
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="AirLine">airline</label>
+                 </div>
+                    <select class = "custom-select" id="Airline" name="Airline">
+                        <option value = "0">Air Asia</option>
+                        <option value = "1">Air India</option>
+                        <option value = "2">GoAir</option>
+                        <option value = "3">IndiGo</option>
+                        <option value = "4">Jet Airways</option>
+                        <option value = "5">Jet Airways Business</option>
+                        <option value = "6">Multiple carriers</option>
+                        <option value = "7">Multiple carriers Premium economy</option>
+                        <option value = "8">SpiceJet</option>
+                        <option value = "9">Tryjet</option>
+                        <option value = "10">Vistara</option>
+                        <option value = "11">Vistara Premium economy</option>
+                    </select>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Source">source</label>
+                </div>
+                    <select class = "custom-select" id ="Source" name="Source">
+                        <option value = "0">Bangalore</option>
+                        <option value = "1">Chennai</option>
+                        <option value = "2">Delhi</option>
+                        <option value = "3">Kolkata</option>
+                        <option value = "3">Mumbai</option>
+                    </select>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Destination">destination</label>
+                </div>
+                    <select class = "custom-select" id= "Destination" name="Destination">
+                        <option value = "0">Bangalore</option>
+                        <option value = "1">Cochin</option>
+                        <option value = "2">Delhi</option>
+                        <option value = "3">Kolkata</option>
+                        <option value = "4">Hyderabad</option>
+                        <option value = "5">New Delhi</option>
+                    </select>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Date">depdate</label>
+                    <input type="number" class="form-control" name="Date" id="Date"  placeholder="Date" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Month">depmonth</label>
+                    <input type="number" class="form-control" name="Month" id="Month"  placeholder="Month" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Year">depyear</label>
+                    <input type="number" class="form-control" name="Year" id="Year"  placeholder="Year" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Dep_Time_Hour">deptimehour</label>
+                    <input type="number" class="form-control" name="Dep_Time_Hour" id="Dep_Time_Hour"  placeholder="Dep_Time_Hour" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Dep_Time_Mins">deptimemins</label>
+                    <input type="number" class="form-control" name="Dep_Time_Mins" id="Dep_Time_Mins"  placeholder="Dep_Time_Mins" required="required"/>
+                </div>
+            </div>
+
+
+
+              <div class="form-group row">
+                  <div class="col-md-3">
+                      <label for="Arrival_Date">artime</label>
+                      <input type="number" class="form-control" name="Arrival_Date" id="Arrival_Date"  placeholder="Arrival_Date" required="required"/>
+                  </div>
+              </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Arrival_Time_Hour">artimehour</label>
+                    <input type="number" class="form-control" name="Arrival_Time_Hour" id="Arrival_Time_Hour"  placeholder="Arrival_Time_Hour" required="required"/>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label for="Arrival_Time_Mins">artimemins</label>
+                    <input type="number" class="form-control" name="Arrival_Time_Mins" id="Arrival_Time_Mins"  placeholder="Arrival_Time_Mins" required="required"/>
+                </div>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-success btn-lg">Submit</button>
+
+        </form>
+        <br>
+        </h4>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
